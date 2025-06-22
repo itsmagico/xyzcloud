@@ -14,7 +14,7 @@ def gerar_wanted():
         return "Erro: forneça o parâmetro ?avatar=", 400
 
     try:
-        fundo = Image.open("static/wanted.jpg").convert("RGBA")
+        fundo = Image.open("static/wanted.png").convert("RGBA")
 
         resposta = requests.get(avatar_url)
         avatar = Image.open(BytesIO(resposta.content)).convert("RGBA").resize((300, 300))
